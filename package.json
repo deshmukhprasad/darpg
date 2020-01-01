@@ -3,7 +3,7 @@
   "version": "2.6.2",
   "private": true,
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -11,8 +11,10 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "dialogflow-gateway": "0.0.7",
+    "express": "^4.17.1",
     "langs": "^2.0.0",
     "register-service-worker": "^1.6.2",
+    "serve-static": "^1.14.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
