@@ -360,9 +360,7 @@ export default {
     },
     watch: {
         /* This function is triggered, when new messages arrive */
-        messages(messages){
-            if (this.history()) localStorage.setItem('message_history', JSON.stringify(messages)) // <- Save history if the feature is enabled
-        },
+
         /* This function is triggered, when request is started or finished */
         loading(){
             setTimeout(() => {
@@ -380,9 +378,7 @@ export default {
     },
     created(){
         /* If history is enabled, the messages are retrieved from localStorage */
-        if (this.history() && localStorage.getItem('message_history') !== null){
-            this.messages = JSON.parse(localStorage.getItem('message_history'))
-        }
+      
 
         /* Session should be persistent (in case of page reload, the context should stay) */
         if (this.history() && localStorage.getItem('session') !== null){
